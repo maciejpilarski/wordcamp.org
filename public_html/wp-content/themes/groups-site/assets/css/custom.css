@@ -912,6 +912,20 @@ body.error404 .site-content-container h1 {
 	background: var(--wp--preset--color--deep-blueberry) !important;
 }
 
+/* An icon button is part of the field it sits against, not a call to
+   action: it wears the input's own grey fill so the pair reads as one
+   control. Only the labelled "Search" text button keeps the primary
+   blueberry. */
+
+.wp-block-search__button.has-icon {
+	background: var(--wp--preset--color--light-grey-2) !important;
+	color: var(--wp--preset--color--charcoal-1) !important;
+}
+
+.wp-block-search__button.has-icon:hover {
+	background: var(--wp--preset--color--light-grey-1) !important;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
