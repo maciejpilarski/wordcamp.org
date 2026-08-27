@@ -410,12 +410,15 @@ body.error404 .site-content-container h1 {
 	min-width: 0;
 }
 
-/* Body size at a two-line measure — the tagline is a description, not a
-   subtitle, so it shouldn't compete with the site title above it. */
+/* The tagline is a description, not a subtitle, so it drops to 14px and
+   shouldn't compete with the site title above it. The design specs the
+   leading in pixels (14/24 and 14/26 below); neither divides into a tidy
+   ratio, so both stay in px — the sizes are fixed, so nothing scales out
+   from under them. */
 
 .groups-site-hero .wp-block-site-tagline {
 	max-width: 72ch;
-	line-height: 1.6;
+	line-height: 24px;
 	text-wrap: pretty;
 }
 
@@ -427,6 +430,15 @@ body.error404 .site-content-container h1 {
 .groups-site-hero-meta .wporg-group-membership__meta {
 	gap: 8px;
 	flex-wrap: nowrap;
+}
+
+/* Both halves of the meta line share one leading so the dot between them
+   sits on the same baseline as the text on either side. */
+
+.groups-site-hero-meta,
+.groups-site-hero-meta .wp-block-wporg-group-location,
+.groups-site-hero-meta .wporg-group-membership__count {
+	line-height: 26px;
 }
 
 /* `wporg/group-location` renders nothing at all when the group hasn't set a
