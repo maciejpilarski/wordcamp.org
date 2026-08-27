@@ -183,8 +183,8 @@ body.error404 .site-content-container h1 {
 	text-wrap: balance;
 }
 
-/* The mat is specced at 640×440 in the design file: 640px is 55.17% of the
-   1160px content width (the media column's share), and the height comes from
+/* The mat is specced at 640×440 in the design file: 640px is half of the
+   1280px content width (the media column's share), and the height comes from
    holding that 640/440 ratio, so the mat renders at exactly the specced size
    on a full-width desktop and scales in proportion below it. The card is
    pinned to the mat's bottom edge and the leftover ratio height becomes the
