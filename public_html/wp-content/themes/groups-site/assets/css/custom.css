@@ -149,6 +149,23 @@ body.error404 .site-content-container h1 {
 }
 
 /* ==========================================================================
+   Local navigation breadcrumbs
+   ========================================================================== */
+
+/* The breadcrumb wrapper scrolls sideways when a long event title overflows
+   the bar. The block's own fade-out mask already signals the clipped text;
+   the scrollbar a classic-scrollbar OS would draw under it is just noise in
+   a 40px-tall bar. */
+
+.wp-block-wporg-site-breadcrumbs .wporg-site-breadcrumbs__wrapper {
+	scrollbar-width: none;
+}
+
+.wp-block-wporg-site-breadcrumbs .wporg-site-breadcrumbs__wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+/* ==========================================================================
    Inner-page header band
    ========================================================================== */
 
@@ -644,19 +661,6 @@ body.error404 .site-content-container h1 {
 
 .groups-site-event-hero .groups-site-hero-text .wp-block-post-title {
 	text-wrap: balance;
-}
-
-/* "{Group name} · {Event title}". The dot is decoration, not content —
-   the slash syntax keeps it out of the accessibility tree, matching the
-   hero-meta separator on the front page. */
-
-.groups-site-event-hero-breadcrumb
-	.wp-block-site-title
-	+ .wp-block-post-title::before {
-	content: "\00b7";
-	content: "\00b7" / "";
-	margin-right: 8px;
-	color: var(--wp--preset--color--charcoal-5);
 }
 
 /* The host's name is a person, not an action — it keeps the text colour
